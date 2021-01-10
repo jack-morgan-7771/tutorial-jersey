@@ -1,0 +1,31 @@
+<div>       
+    <div>
+        <ul> 
+            LIST OF ALL ACTIVITIES: 
+            <li ng-repeat="activity in activities"> 
+                DESCRIPTION: {{activity.desc}} </br>
+                ACTIVITY: {{activity.dur}}
+            </li>
+        </ul>
+    </div>
+    <div>
+        <form ng-submit="uploadActivity()">
+            <input type="text" required placeholder="Activity name" ng-model="activityName"/>   
+            <input type="number" required placeholder="Activity duration" ng-model="activityDuration"/>  
+            <input type="submit" value="Add"/>
+        </form>
+    </div>
+    <h2>
+        ADDED SUCCESSFULLY (OK RESPONSE) NAME: {{recentlyAddedName}}
+    </h2>
+    <h2>
+        ADDED SUCCESSFULLY (OK RESPONSE) DURATION: {{recentlyAddedDuration}}
+    </h2>
+    <h2>
+        {{ countdown }}
+    </h2>  
+    <form ng-submit="search(username)">
+        <input type="search" required placeholder="Username to find" ng-model="username"/>   
+        <input type="submit" value="Search"/>
+    </form>
+</div>
